@@ -5,6 +5,11 @@
 ## Build Setup
 
 ``` bash
+#install Vuejs cli
+npm install -g @vue/cli
+# OR
+yarn global add @vue/cli
+
 # install dependencies
 npm install
 
