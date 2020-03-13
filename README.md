@@ -1,6 +1,9 @@
 # pokedex
 
-> A Vue.js project
+>O Pokedex eh uma aplicação feita em Vuejs, na qual através da api pokeapi.co, utilizando axios, consegue carregar uma lista
+Com todos os pokémons, nessa aplicação ao clicar em um pokémon da lista, eh exibido os detalhes sobre aquele pokémon.
+
+
 
 ## Build Setup
 
@@ -22,9 +25,4 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
-#Sobre o projeto
-
-O Pokedex eh uma aplicação na qual através da api pokeapi.co consegue carregar uma lista
-Com todos os pokémons, nessa aplicação ao clicar em um pokémon da lista, eh exibido os detalhes sobre aquele pokémon.
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+#For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
