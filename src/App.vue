@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container-fluid">
-    <PaginaInicial />
+    <Main />
   </div>
 </template>
 
 <script>
-import PaginaInicial from './components/pagina-inicial.vue'
+import Main from './components/Main/index.vue'
 
 export default {
   name: 'App',
   components: {
-    PaginaInicial
+    Main
   }
 }
 </script>
