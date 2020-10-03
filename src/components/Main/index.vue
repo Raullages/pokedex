@@ -1,31 +1,38 @@
 <template>
   <div class="container">
     <div class="row form-group">
-      <div class="header col-xs-12 text-center">
-        <h2>POKÉDEX</h2>
+      <div class="text-style header col-xs-12 text-left">
+        <h2>POKEDEX</h2>
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-10 col-sm-10 col-md-10 form-group" >
+      <div class="col-xs-12">
+        <pk-lista
+          :lista_pokemons="lista_pokemons"
+          :_height="_height"
+          @click-caracteristica="(item) => caracteristicas(item)"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 form-group" >
         <div class="row" v-if="pokemon == ''">
-          <div class="col-xs-12 text-left">
-            <h1>Choose a Pokemon</h1>
+          <div class="col-xs-12 text-center">
+            <h1 style="color: #f0f0f0; margin-top: 30px">Choose a Pokemon</h1>
           </div>
         </div>
         <div class="row" v-if="pokemon != ''">
           <div class="col-xs-12 text-center">
-            <img :src="pokemon.image" alt="" style="width: 180px; height: 180px">
+            <img
+              :src="pokemon.image"
+              alt=""
+              style="width: 180px; height: 180px"
+            >
             <h2>{{pokemon.name.toUpperCase()}}</h2>
           </div>
           <div class="col-xs-12">
             <pk-dados-pokemon :pokemon="pokemon" />
           </div>
-        </div>
-      </div>
-        
-      <div class="col-xs-2 col-sm-2 col-md-2">
-        <div class="row">
-          <pk-lista :lista_pokemons="lista_pokemons" :_height="_height" @click-caracteristica="(item) => caracteristicas(item)" />
         </div>
       </div>
     </div>
@@ -116,15 +123,9 @@ export default {
 </script>
 <style scoped>
 .header {
-  border: 1px solid #000;
   border-radius: 15px;
-  background-color: #343434;
   margin-top: 10px;
   padding: 5px;
-}
-.header h2 {
-  margin: 0px;
-  color: #FFF
 }
 
 h1{

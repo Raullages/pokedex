@@ -1,0 +1,23 @@
+
+@font-face {
+  font-family: PokemonHollow;
+  src: url('./fonts/PokemonHollow.ttf');
+}
+@font-face {
+  font-family: PokemonSolid;
+  src: url('./fonts/PokemonSolid.ttf');
+}
+
+html, body {
+  background-color: #f0f0f0;
+  font-family: PokemonHollow;
+  white-space: 10px;
+  color: #343434;
+  letter-spacing: 2px;
+}
+
+.text-style{
+  font-family: PokemonSolid;
+  color: #ffd000;
+  text-shadow: 0px 2px 1px #0240b3;
+}

@@ -1,5 +1,8 @@
 <template>
-  <div id="app" class="container-fluid">
+  <div
+    id="app"
+    class="container-fluid"
+  >
     <Main />
   </div>
 </template>
