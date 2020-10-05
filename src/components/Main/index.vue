@@ -1,12 +1,12 @@
 <template>
-  <div class="container">
-    <div class="row form-group">
+  <div class="row">
+    <div class="col-xs-12 form-group">
       <div class="text-style header col-xs-12 text-left">
         <h2>POKEDEX</h2>
       </div>
     </div>
-    <div class="row">
-      <div class="col-xs-12">
+    <div class="col-xs-12">
+      <div class="row">  
         <pk-lista
           :lista_pokemons="lista_pokemons"
           :_height="_height"
@@ -14,21 +14,20 @@
         />
       </div>
     </div>
-    <div class="row">
+    <div class="col-xs-12">
       <div class="col-xs-12 form-group" >
         <div class="row" v-if="pokemon == ''">
           <div class="col-xs-12 text-center">
             <h1 style="color: #f0f0f0; margin-top: 30px">Choose a Pokemon</h1>
           </div>
         </div>
-        <div class="row" v-if="pokemon != ''">
+        <div class="row" style="margin-top: 40px" v-if="pokemon != ''">
           <div class="col-xs-12 text-center">
             <img
               :src="pokemon.image"
               alt=""
-              style="width: 180px; height: 180px"
             >
-            <h2>{{pokemon.name.toUpperCase()}}</h2>
+            <h2 class="text-style">{{pokemon.name.toUpperCase()}}</h2>
           </div>
           <div class="col-xs-12">
             <pk-dados-pokemon :pokemon="pokemon" />
@@ -80,13 +79,12 @@ export default {
       }
 
       let lista_completa = list.map((o, index) => {
-
         for(let i in lista.data.results){
           if(index == i){
             return {
               name: lista.data.results[i].name,
               url: lista.data.results[i].url,
-              image: o.data.sprites.front_default,
+              image: o.data.sprites.other.dream_world.front_default,
               dados: o.data
             }
           }
@@ -127,9 +125,8 @@ export default {
   margin-top: 10px;
   padding: 5px;
 }
-
-h1{
-  margin: 0
+.header h2 {
+  text-align: center;
 }
 
 </style>
